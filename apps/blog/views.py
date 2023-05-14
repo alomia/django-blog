@@ -1,4 +1,6 @@
 from django.shortcuts import render, get_object_or_404
+from django.views.generic import ListView
+
 from .models import Post
 
 
@@ -15,3 +17,9 @@ def post_detail(request, year, month, day, post):
                              publish__month=month,
                              publish__day=day)
     return render(request, "post_detail.html", {"post": post})
+
+
+class PostListView(ListView):
+    queryset = Post.published.all()
+    context_object_name = "posts"
+    template_name = "post_list.html"
