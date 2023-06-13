@@ -1,3 +1,12 @@
 asgiref==3.6.0
+dj-database-url==2.0.0
+dj-email-url==1.0.6
 Django==4.1.8
+django-cache-url==3.4.4
+django-taggit==3.0.0
+environs==9.5.0
+marshmallow==3.19.0
+packaging==23.1
+python-dotenv==1.0.0
 sqlparse==0.4.4
+typing_extensions==4.5.0
